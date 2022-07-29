@@ -1,0 +1,284 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  background-color: hsl(0, 0%, 48%);
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  margin: 0px 10rem;
+}
+
+.list-Header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid hsla(240, 90%, 8%, .2);
+}
+
+.label li {
+  list-style-type: none;
+  padding: 1rem 0;
+  font-size: 1.3rem;
+}
+
+.label li a {
+  color: hsl(240, 90%, 8%);
+
+  font-weight: bold;
+}
+
+.navbar ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+.navbar ul li {
+  list-style-type: none;
+  margin: 0 .5rem 0 .5rem;
+  padding: 1.5rem 0;
+  font-size: .8rem;
+}
+
+.navbar ul li.active {
+  border-bottom: 2px solid hsla(240, 90%, 8%, .8)
+}
+
+.navbar ul li:hover {
+  border-bottom: 2px solid hsl(0, 96%, 61%)
+}
+
+.about-m {
+  display: flex;
+  gap: 1.8rem;
+  align-items: flex-start;
+  justify-content: space-around;
+  margin-top: 6rem !important;
+}
+
+.about-m .info {
+  width: 90%;
+  word-wrap: break-word;
+}
+
+.about-m .info li {
+  width: 80%;
+  list-style-type: disc;
+  line-height: 1.9;
+}
+
+.about-m button {
+  padding: 1.5rem 3rem;
+  border-radius: 2rem;
+  margin-top: 3rem;
+  outline: none;
+  border: none;
+  background-color: hsl(0, 96%, 61%);
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.about-m button:hover {
+  opacity: .8;
+}
+
+.about-m img {
+  width: 23rem;
+  aspect-ratio: 1;
+  border-radius: 20px;
+}
+
+footer {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* contact page */
+.form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30rem;
+  padding: 50px;
+  transform: translate(-50%, -50%);
+  background: hsl(37, 94%, 41%);
+  box-shadow: 0 0px 25px rgba(170, 88, 20, 0.6);
+  border-radius: .8rem;
+}
+
+.form .user-box {
+  position: relative;
+}
+
+.form .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 10px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.form .user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  font-size: .7rem;
+  color: #000;
+  font-weight: 700;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.form .user-box input:focus~label,
+.form .user-box input:valid~label {
+  top: -25px;
+  left: 0;
+  color: #fff;
+  font-size: .9rem;
+}
+
+.form button {
+  background-color: hsla(0, 0%, 100%, .8);
+  text-transform: uppercase;
+  padding: 1rem 1rem;
+  border-radius: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  width: 99%;
+}
+
+.form button:hover {
+  opacity: .9;
+}
+
+/* Registration Page */
+#registration .form {
+  width: 35rem;
+}
+
+#registration .form form {
+  display: flex;
+  flex-direction: row;
+  width: 29rem;
+  gap: 1.2rem;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.user-box .d-gender {
+  position: absolute;
+  top: -1.35rem;
+}
+
+@media (max-width: 968px) {
+  .container {
+    margin: 0px 2rem;
+  }
+
+   footer {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .label li {
+    font-size: .9rem;
+  }
+
+  .navbar ul li {
+    font-size: .7rem;
+  }
+
+  .about-m {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem !important;
+  }
+
+  .about-m img {
+    width: 16rem;
+  }
+
+  .about-m div:last-child {
+    order: 1;
+  }
+
+  .about-m div:first-child {
+    order: 2;
+  }
+
+  .about-m .info {
+    width: 100%;
+  }
+
+  .about-m .info li {
+    width: 100%;
+    line-height: 1.5;
+    font-size: .8rem;
+  }
+
+  .about-m button {
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+  }
+
+  #registration .form {
+    width: 30rem;
+  }
+  
+  #registration .form form {
+    width: 25rem;
+    gap: 1rem;
+  }
+}
+<html>
+<head>
+<style>
+h1 {text-align: center;}
+p {text-align: center;}
+div {text-align: center;}
+</style>
+</head>
+<body>
+
+<h1>Thrive tutoring</h1>
+<p>Not just to teach your kids but also let them have funt too</p>
+<div>This is a div.</div>
+
+</body>
+</html>
